@@ -75,14 +75,14 @@ export function t(key: string): string {
 export function creatorname() {
   console.clear();
   console.log(
-    gradient(["#ff0000", "#cc0000", "#990000"])(`
-███╗   ███╗ ██████╗ ██╗   ██╗███╗   ██╗██████╗  ██████╗         ███████╗██╗  ██╗ █████╗ ██████╗  ██████╗ ██╗    ██╗
-████╗ ████║██╔═══██╗██║   ██║████╗  ██║██╔══██╗██╔═══██╗        ██╔════╝██║  ██║██╔══██╗██╔══██╗██╔═══██╗██║    ██║
-██╔████╔██║██║   ██║██║   ██║██╔██╗ ██║██║  ██║██║   ██║        ███████╗███████║███████║██║  ██║██║   ██║██║ █╗ ██║
-██║╚██╔╝██║██║   ██║██║   ██║██║╚██╗██║██║  ██║██║   ██║        ╚════██║██╔══██║██╔══██║██║  ██║██║   ██║██║███╗██║
-██║ ╚═╝ ██║╚██████╔╝╚██████╔╝██║ ╚████║██████╔╝╚██████╔╝        ███████║██║  ██║██║  ██║██████╔╝╚██████╔╝╚███╔███╔╝
-╚═╝     ╚═╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═════╝  ╚═════╝         ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝  ╚═════╝  ╚══╝╚══╝ 
-                                                                                                                   
+    gradient(["#d966ff", "#b84dff", "#8c1aff"])(`
+███╗   ███╗██████╗     ███╗   ███╗ ██████╗ ██╗   ██╗███╗   ██╗██████╗  ██████╗ 
+████╗ ████║██╔══██╗    ████╗ ████║██╔═══██╗██║   ██║████╗  ██║██╔══██╗██╔═══██╗
+██╔████╔██║██████╔╝    ██╔████╔██║██║   ██║██║   ██║██╔██╗ ██║██║  ██║██║   ██║
+██║╚██╔╝██║██╔══██╗    ██║╚██╔╝██║██║   ██║██║   ██║██║╚██╗██║██║  ██║██║   ██║
+██║ ╚═╝ ██║██║  ██║    ██║ ╚═╝ ██║╚██████╔╝╚██████╔╝██║ ╚████║██████╔╝╚██████╔╝
+╚═╝     ╚═╝╚═╝  ╚═╝    ╚═╝     ╚═╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═════╝  ╚═════╝ 
+                                                                                                                                                                                                 
 `)
   );
 
@@ -92,7 +92,7 @@ export function creatorname() {
 export function menutext(client: Client) {
   creatorname();
   const goodbyegudog = langat !== "en" ? gradient(["#2180db", "#75a1cb", "#78a5d3"])(["[0] Nos despedimos do Gudog com carinho, Adeus gudog\n", "[0] Em homenagem ao gudog, Descanse em paz\n", "[0] Em memória do Gudog, um administrador que nos deixou. Adeus, amigo\n"][Math.floor(Math.random() * 3)]) : null;
-  console.log((goodbyegudog ? goodbyegudog : '') + gradient(["#ff0000", "#cc0000", "#990000"])(t("menuText")));
+  console.log((goodbyegudog ? goodbyegudog : '') + gradient(["#d966ff", "#b84dff", "#8c1aff"])(t("menuText")));
   choiceinit(client);
 }
 
@@ -101,7 +101,7 @@ export function infouser(client: Client) {
   creatorname();
 
   console.log(
-    gradient(["#ff0000", "#cc0000", "#990000"])(
+    gradient(["#d966ff", "#b84dff", "#8c1aff"])(
       t(`Nome da conta: ${client.user.username}\nNome global da conta: ${client.user.globalName
         }\nAvatar ${client.user.avatarURL({
           format: "png",
@@ -288,39 +288,39 @@ export async function serverinfo(client: Client) {
       const preview = await guild.fetchPreview();
       creatorname();
       console.log(
-        gradient(["#ff0000", "#cc0000", "#990000"])(
+        gradient(["#d966ff", "#b84dff", "#8c1aff"])(
           `Nome do servidor: ${preview.name}`
         )
       );
       console.log(
-        gradient(["#ff0000", "#cc0000", "#990000"])(
+        gradient(["#d966ff", "#b84dff", "#8c1aff"])(
           `Descrição do servidor: ${preview.description}`
         )
       );
       console.log(
-        gradient(["#ff0000", "#cc0000", "#990000"])(
+        gradient(["#d966ff", "#b84dff", "#8c1aff"])(
           `Número de Membros: ${preview.approximateMemberCount}`
         )
       );
       console.log(
-        gradient(["#ff0000", "#cc0000", "#990000"])(
+        gradient(["#d966ff", "#b84dff", "#8c1aff"])(
           `Número de Canais: ${preview.approximatePresenceCount}`
         )
       );
       console.log(
-        gradient(["#ff0000", "#cc0000", "#990000"])(
+        gradient(["#d966ff", "#b84dff", "#8c1aff"])(
           `Criado em: ${preview.createdAt}`
         )
       );
       console.log(
-        gradient(["#ff0000", "#cc0000", "#990000"])(
+        gradient(["#d966ff", "#b84dff", "#8c1aff"])(
           `ID do servidor: ${preview.id}`
         )
       );
 
       if (preview.icon) {
         console.log(
-          gradient(["#ff0000", "#cc0000", "#990000"])(
+          gradient(["#d966ff", "#b84dff", "#8c1aff"])(
             `Ícone do servidor: ${preview.iconURL()}`
           )
         );
@@ -328,7 +328,7 @@ export async function serverinfo(client: Client) {
 
       if (preview.splash) {
         console.log(
-          gradient(["#ff0000", "#cc0000", "#990000"])(
+          gradient(["#d966ff", "#b84dff", "#8c1aff"])(
             `Splash do servidor: ${preview.splashURL()}`
           )
         );
@@ -336,30 +336,30 @@ export async function serverinfo(client: Client) {
 
       if (preview.discoverySplash) {
         console.log(
-          gradient(["#ff0000", "#cc0000", "#990000"])(
+          gradient(["#d966ff", "#b84dff", "#8c1aff"])(
             `Discovery Splash do servidor: ${preview.discoverySplashURL()}`
           )
         );
       }
 
       console.log(
-        gradient(["#ff0000", "#cc0000", "#990000"])(
+        gradient(["#d966ff", "#b84dff", "#8c1aff"])(
           `Recursos do servidor: ${preview.features.join(", ")}`
         )
       );
       console.log(
-        gradient(["#ff0000", "#cc0000", "#990000"])(
+        gradient(["#d966ff", "#b84dff", "#8c1aff"])(
           `Emojis do servidor: ${preview.emojis.size}`
         )
       );
       console.log(
-        gradient(["#ff0000", "#cc0000", "#990000"])(
+        gradient(["#d966ff", "#b84dff", "#8c1aff"])(
           `Stickers do servidor: ${preview.stickers.size}`
         )
       );
     } catch (error) {
       console.error(
-        gradient(["#ff0000", "#cc0000", "#990000"])("Aconteceu um erro:"),
+        gradient(["#d966ff", "#b84dff", "#8c1aff"])("Aconteceu um erro:"),
         error
       );
     }
